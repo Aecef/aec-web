@@ -25,13 +25,13 @@ export default {
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img :src='valorant' class="d-block w-100" alt="Image of Valorant Stats ">
+              <img :src='valorant' class="d-block" alt="Image of Valorant Stats ">
             </div>
             <div class="carousel-item">
-              <img :src="hitbox" class="d-block w-100" alt="Image of a 3D Modeled Hitbox">
+              <img :src="hitbox" class="d-block" alt="Image of a 3D Modeled Hitbox">
             </div>
             <div class="carousel-item">
-              <img :src="iowa" class="d-block w-100" alt="Image of an artificial recreation of UoI">
+              <img :src="iowa" class="d-block" alt="Image of an artificial recreation of UoI">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -45,3 +45,13 @@ export default {
         </div>
     </div>
 </template>
+
+
+<style scoped>
+
+.carousel-item img {
+    height: 80vh;
+    width: 80vh;
+}
+
+</style>
