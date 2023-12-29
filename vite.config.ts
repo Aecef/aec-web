@@ -14,6 +14,7 @@ export default defineConfig({
       '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
       '@images': fileURLToPath(new URL('./src/assets/images', import.meta.url)),
       '@svg': fileURLToPath(new URL('./src/assets/svg', import.meta.url)),
+      "sub-pages": fileURLToPath(new URL('./src/components/sub-pages', import.meta.url)),
       "~bootstrap": fileURLToPath( new URL("./node_modules/bootstrap", import.meta.url)),
         }
   }

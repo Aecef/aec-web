@@ -2,8 +2,13 @@
 
 <script lang="ts">
 
+import HomeTimeline from "@/components/sub-pages/home/HomeTimeline.vue";
+
 export default {
   name: 'Home',
+  components: {
+    HomeTimeline
+  },
   data() {
     return {      
         valorant: './src/assets/img/Valorant.PNG',
@@ -44,6 +49,7 @@ export default {
           </button>
         </div>
     </div>
+    <HomeTimeline />
 </template>
 
 
