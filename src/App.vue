@@ -6,6 +6,7 @@ export default {
       landing: { name: 'Home', path: '/' },
       navPages: [
         { name: 'About', path: '/about' },      
+        { name: 'Projects', path: '/projects' },      
       ],
     }
   }

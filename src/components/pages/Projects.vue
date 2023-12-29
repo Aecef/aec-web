@@ -1,27 +1,21 @@
 
-
 <script lang="ts">
-
-import HomeTimeline from "@/components/sub-pages/home/HomeTimeline.vue";
-
-export default {
-  name: 'Home',
-  components: {
-    HomeTimeline
-  },
-  data() {
-    return {      
-        valorant: './src/assets/img/Valorant.PNG',
-        hitbox: './src/assets/img/box_paint.jpg',
-        iowa: './src/assets/img/UoI.jpg',
+    export default {
+      name: 'Projects',
+      data() {
+        return {      
+            valorant: './src/assets/img/Valorant.PNG',
+            hitbox: './src/assets/img/box_paint.jpg',
+            iowa: './src/assets/img/UoI.jpg',
+        }
+      }
     }
-  }
-}
 
 </script>
 
+
 <template>
-    <div id="home" class="d-flex place-content-center w-screen">
+    <div id="Projects" class="d-flex place-content-center w-screen">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -49,11 +43,7 @@ export default {
           </button>
         </div>
     </div>
-    <div class="d-flex place-content-center w-screen">
-        <HomeTimeline />
-    </div>
 </template>
-
 
 <style scoped>
 
