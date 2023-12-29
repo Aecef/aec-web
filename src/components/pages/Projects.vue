@@ -1,12 +1,26 @@
 
 <script lang="ts">
+
+import HitboxCarousel from "@components/carousels/HitboxCarousel.vue";
+
+
     export default {
       name: 'Projects',
+      components: {
+        HitboxCarousel
+      },
       data() {
+
+        const items = [
+            { text: 'Summary', disabled: false, href: '/#' },
+            { text: 'Purpose', disabled: false, href: '/#' },
+            { text: 'Skills', disabled: false, href: '/#' },
+          ]
         return {      
             valorant: './src/assets/img/Valorant.PNG',
             hitbox: './src/assets/img/box_paint.jpg',
             iowa: './src/assets/img/UoI.jpg',
+            items
         }
       }
     }
@@ -15,41 +29,43 @@
 
 
 <template>
-    <div id="Projects" class="d-flex place-content-center w-screen">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img :src='valorant' class="d-block" alt="Image of Valorant Stats ">
-            </div>
-            <div class="carousel-item">
-              <img :src="hitbox" class="d-block" alt="Image of a 3D Modeled Hitbox">
-            </div>
-            <div class="carousel-item">
-              <img :src="iowa" class="d-block" alt="Image of an artificial recreation of UoI">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+    <div id="Projects" class="place-content-center w-screen">
+      
+      <div class="container project-container">
+        <div class="row">
+          <v-card class="col-md-4" style="display: grid; place-items: center;">
+            <img :src="hitbox" alt="Image of Hitbox">
+          </v-card>
+          <!-- <img :src="hitbox" class="col-sm-4" alt="Image of Valorant Stats"> -->
+          <v-card class="col-md-8 d-flex place-content-center" min-height="450px">
+            <HitboxCarousel />
+          </v-card>
         </div>
+      </div>
+
+      <div class="container project-container">
+          <div class="row">
+            <v-card class="col-md-8 d-flex place-content-center" min-height="450px">
+              <HitboxCarousel />
+            </v-card>
+            <v-card class="col-md-4" style="display: grid; place-items: center;">
+              <img :src="valorant" alt="Image of Valorant Stats">
+            </v-card>
+          </div>
+      </div>
     </div>
+
+
 </template>
 
 <style scoped>
 
 .carousel-item img {
-    height: 80vh;
-    width: 80vh;
+  height: 80vh;
+  width: 80vh;
 }
 
+.project-container {
+  margin-top: 5vh;
+}
 </style>

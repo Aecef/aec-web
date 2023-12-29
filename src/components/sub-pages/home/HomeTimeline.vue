@@ -7,21 +7,43 @@ export default {
     const timelineData = [
         {
             title: "New Chapter",
-            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.",
+            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
         },
         {
-            title: "Title 2",
-            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.",
+            title: "Certified Associate in Project Management (CAPM)",
+            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
         },
         {
-            title: "Title 3",
-            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.",
-        },        
+            title: "Client Home Healthcare Inc.",
+            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        },
+        {
+            title: "BSE in Computer Science Engineering",
+            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        },
+        {
+            title: "Sentinel Technologies",
+            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        },
+        {
+            title: "OASIS",
+            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        },
+        { 
+            title: "Covid",
+            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        },
+        {
+            title: "EPX Studio",
+            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        },
+        {
+            title: "Univeristy of Iowa",
+            text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        },
+
     ]
     return {      
-        valorant: './src/assets/img/Valorant.PNG',
-        hitbox: './src/assets/img/box_paint.jpg',
-        iowa: './src/assets/img/UoI.jpg',
         timelineData,
     }
 
