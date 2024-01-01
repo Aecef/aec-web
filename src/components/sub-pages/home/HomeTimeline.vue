@@ -57,8 +57,7 @@ export default {
 <template>
     <v-timeline>
       <v-timeline-item
-        v-for="item in this.timelineData"
-        :key="item"
+        v-for="item in timelineData"
         dot-color="purple-lighten-2"
         fill-dot
       >
