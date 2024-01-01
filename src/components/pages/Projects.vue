@@ -1,19 +1,19 @@
 
 <script lang="ts">
 
-import Carousel from "@components/carousels/Carousel.vue";
+import CarouselCard from "@components/carousels/CarouselCard.vue";
 import Carousels from "@components/carousels/Carousels.json";
 
     export default {
       name: 'Projects',
       components: {
-        Carousel
+        CarouselCard
       },
       data() {
 
           let imgSideRef = 0;
           const switchSides = () => { return imgSideRef++; }
-          
+
         return {      
             Carousels,
             imgSideRef,
@@ -28,7 +28,7 @@ import Carousels from "@components/carousels/Carousels.json";
 <template>
     <div id="Projects" class="place-content-center w-screen">  
       <div class="container project-container" v-for="carousel in Carousels">
-            <Carousel :title="carousel.title" 
+            <CarouselCard :title="carousel.title" 
                       :summary="carousel.summary" 
                       :purpose="carousel.purpose"
                       :url="carousel.url" 
