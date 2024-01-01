@@ -12,12 +12,15 @@ import Carousels from "@components/carousels/Carousels.json";
       data() {
 
           let imgSideRef = 0;
-          const switchSides = () => { return imgSideRef++; }
+          const switchSides = () => { 
+            imgSideRef++;
+            return  (imgSideRef % 2);
+          }
 
         return {      
             Carousels,
             imgSideRef,
-            switchSides,
+            switchSides, //Controls the side of the image, alternating between right and left every time it is called.
         }
       },
   }
@@ -26,12 +29,13 @@ import Carousels from "@components/carousels/Carousels.json";
 
 
 <template>
-    <div id="Projects" class="place-content-center w-screen">  
+    <div id="Projects" class="place-content-center w-screen ">  
       <div class="container project-container" v-for="carousel in Carousels">
             <CarouselCard :title="carousel.title" 
                       :summary="carousel.summary" 
                       :purpose="carousel.purpose"
                       :url="carousel.url" 
+                      :skills="carousel.skills"
                       :side="switchSides()" />
       </div>
     </div>
