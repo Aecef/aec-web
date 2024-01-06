@@ -1,31 +1,49 @@
 <script lang="ts">
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
-      landing: { name: 'Home', path: '/' },
+      landing: { name: "Home", path: "/" },
       navPages: [
-        { name: 'About', path: '/about' },      
-        { name: 'Projects', path: '/projects' },      
+        { name: "About", path: "/about" },
+        { name: "Projects", path: "/projects" },
       ],
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <template>
   <nav class="navbar navbar-expand" id="nav-main">
     <div class="container-fluid">
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav_Header" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler ms-auto"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#nav_Header"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="nav_Header">
         <ul class="navbar-nav">
           <li class="nav-item" id="home-link">
-            <router-link :to="landing.path" class="nav-link" style="color: white;">{{ landing.name }}</router-link>
+            <router-link
+              :to="landing.path"
+              class="nav-link"
+              style="color: white"
+              >{{ landing.name }}</router-link
+            >
           </li>
-          <li class="nav-item" v-for="page in navPages" :key="page.name" >
-            <router-link :to="page.path" class="nav-link" style="color: white;">{{ page.name }}</router-link>
+          <li class="nav-item" v-for="page in navPages" :key="page.name">
+            <router-link
+              :to="page.path"
+              class="nav-link"
+              style="color: white"
+              >{{ page.name }}</router-link
+            >
           </li>
         </ul>
       </div>
@@ -35,7 +53,6 @@ export default {
 </template>
 
 <style>
-
 nav {
   z-index: 5;
   box-shadow: 0px -10px 35px #343159;
@@ -54,18 +71,15 @@ nav {
   /* z-index: 1; */
   /* padding-top: 10px; */
   padding-left: 25px;
-
 }
 
 #nav-main {
   background-color: black;
   padding-top: 0%;
   width: inherit;
-
 }
 
 .nav-item {
-
   font-family: "Jomhuria", Helvetica;
   font-size: 3rem;
   font-weight: 400;
