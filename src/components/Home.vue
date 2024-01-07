@@ -21,7 +21,7 @@ export default {
     <div class="row">
       <div class="container mt-5" id="alec-cover">
         <v-card
-          class="col-md-8 d-flex place-content-center w-full"
+          class="col-md-8 d-flex place-content-center w-full grid place-items-center"
           min-height="450px"
         >
           <h1>Alec Cleofe</h1>
@@ -29,7 +29,9 @@ export default {
       </div>
     </div>
     <div class="d-flex place-content-center w-screen row">
-      <HomeTimeline />
+      <div class="container grid place-items-center">
+        <HomeTimeline />
+      </div>
     </div>
   </div>
 </template>

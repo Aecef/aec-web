@@ -7,7 +7,23 @@ export default {
     purpose: String,
     skills: String,
     url: String,
-    side: Number | Function,
+    side: Number,
+  },
+  mounted() {
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const { target } = entry;
+        if (entry.isIntersecting) {
+          target.classList.add("show");
+        } else {
+          target.classList.remove("show");
+        }
+      });
+    });
+    const targets = document.querySelectorAll(".target-card");
+    targets.forEach((target) => {
+      cardObserver.observe(target);
+    });
   },
   methods: {
     carouselNav(selection) {
@@ -33,25 +49,25 @@ export default {
 </script>
 
 <template>
-  <div class="row">
+  <div id="CarouselCard" class="row">
     <v-card
-      class="col-md-4"
+      class="col-md-4 target-card"
       style="display: grid; place-items: center"
       v-if="this.side == 1"
     >
       <v-card class="flex row-2 w-[100%]"
         ><h1 class="pr-name">{{ this.title }}</h1></v-card
       >
+      <v-card class="flex row-2 w-[100%]"
+        ><h2><b>Tags:</b> {{ this.skills }}</h2></v-card
+      >
       <img
         class="flex row-8"
         :src="this.url"
         :alt="'Image for the project with the title: ' + this.title"
       />
-      <v-card class="flex row-2 w-[100%]"
-        ><h2><b>Tags:</b> {{ this.skills }}</h2></v-card
-      >
     </v-card>
-    <v-card class="col-md-8 d-flex place-content-center" min-height="450px">
+    <v-card class="col-md-8 d-flex place-content-center" min-height="500px">
       <div :id="this.title" class="carousel slide" data-bs-ride="true">
         <v-breadcrumbs>
           <v-breadcrumbs-item>
@@ -72,7 +88,7 @@ export default {
             </button>
           </v-breadcrumbs-item>
         </v-breadcrumbs>
-        <div class="carousel-inner">
+        <div class="carousel-inner d-flex grid place-items-center">
           <div :id="this.title + '-summary'" class="carousel-item active">
             <h1>Summary</h1>
             <p>{{ summary }}</p>
@@ -89,7 +105,7 @@ export default {
       </div>
     </v-card>
     <v-card
-      class="col-md-4"
+      class="col-md-4 target-card"
       style="display: grid; place-items: center"
       v-if="this.side == 0"
     >
@@ -109,11 +125,24 @@ export default {
 </template>
 
 <style scoped>
+.target-card {
+  opacity: 0;
+  transform: scale(0.2);
+  transition: all 2s;
+}
+.show {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 2s;
+}
 .pr-name {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
+p {
+  padding: 2.5rem;
+}
 button.carousel-nav {
   background: none;
   color: inherit;
