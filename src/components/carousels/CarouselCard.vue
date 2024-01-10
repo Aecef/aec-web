@@ -5,7 +5,7 @@ export default {
     title: String,
     summary: String,
     purpose: String,
-    skills: String,
+    skills: Object,
     url: String,
     side: Number,
   },
@@ -58,9 +58,6 @@ export default {
       <v-card class="flex row-2 w-[100%]"
         ><h1 class="pr-name">{{ this.title }}</h1></v-card
       >
-      <v-card class="flex row-2 w-[100%]"
-        ><h2><b>Tags:</b> {{ this.skills }}</h2></v-card
-      >
       <img
         class="flex row-8"
         :src="this.url"
@@ -84,7 +81,7 @@ export default {
           <v-breadcrumbs-divider />
           <v-breadcrumbs-item>
             <button class="carousel-nav" @click="carouselNav('skills')">
-              Skills
+              Tools
             </button>
           </v-breadcrumbs-item>
         </v-breadcrumbs>
@@ -98,8 +95,14 @@ export default {
             <p>{{ purpose }}</p>
           </div>
           <div :id="this.title + '-skills'" class="carousel-item">
-            <h1>Skills</h1>
-            <p>{{ skills }}</p>
+            <h1>Tools</h1>
+            <p v-for="tool in this.skills">
+              <font-awesome-icon
+                :icon="tool"
+                size="2xl"
+                style="transform: scale(2)"
+              />
+            </p>
           </div>
         </div>
       </div>
@@ -112,14 +115,12 @@ export default {
       <v-card class="flex row-2 w-[100%]"
         ><h1 class="pr-name">{{ this.title }}</h1></v-card
       >
+
       <img
         class="flex row-8"
         :src="this.url"
         :alt="'Image for the project with the title: ' + this.title"
       />
-      <v-card class="flex row-2 w-[100%]"
-        ><h2><b>Tags:</b> {{ this.skills }}</h2></v-card
-      >
     </v-card>
   </div>
 </template>

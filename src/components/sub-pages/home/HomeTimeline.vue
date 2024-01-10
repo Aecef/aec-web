@@ -17,6 +17,7 @@ export default {
       },
       {
         title: "Client Home Healthcare Inc.",
+        link: "https://www.clienthhc.com/",
         position: "Help Desk Specialist",
         timePeriod: "June 2022 - July 2023",
         text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
@@ -28,9 +29,11 @@ export default {
       },
       {
         title: "Sentinel Technologies",
+        link: "https://www.sentinel.com/",
         position: "Application Developer Intern",
         timePeriod: "June 2021 - August 2021",
-        text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        text: "Internship at Sentinel Technologies as an Application Developer. \
+                \nWorked on a team to develop a web application utilizing the ASP .NET framework.",
       },
       {
         title:
@@ -46,6 +49,7 @@ export default {
       },
       {
         title: "EPX Studio",
+        link: "https://epx.org.uiowa.edu/",
         position: "President",
         timePeriod: "August 2019 - May 2022",
         text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
@@ -53,7 +57,12 @@ export default {
       {
         title: "Univeristy of Iowa",
         timePeriod: "August 2018",
-        text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        text: "After a reassessment of my educational/life goals I made the difficult decision to transfer to the University of Iowa as a  Computer Science and Engineering major.",
+      },
+      {
+        title: "Univeristy of Louisville",
+        timePeriod: "August 2017",
+        text: "Entered the College of Engineering as a Computer Science and Computer Engineering major.",
       },
     ];
     return {
@@ -89,11 +98,16 @@ export default {
       <v-card class="timeline-item">
         <v-card-title class="bg-purple-lighten-2">
           <v-icon size="large" class="me-4" icon="mdi-magnify"></v-icon>
-          <h2 class="font-weight-light">
+          <h2 class="font-weight-light" v-if="!item.link">
             <strong>
               {{ item.title }}
             </strong>
           </h2>
+          <div v-if="item.link">
+            <a :href="item.link" target="_blank" rel="noopener noreferrer"
+              ><h2>{{ item.title }}</h2>
+            </a>
+          </div>
           <div class="text-sm pt-2">{{ item.position }}</div>
           <div>
             <i class="text-xs">{{ item.timePeriod }}</i>
@@ -108,6 +122,9 @@ export default {
 </template>
 
 <style scoped>
+a {
+  font-weight: bolder;
+}
 .timeline-item {
   opacity: 0;
   filter: blur(10px);

@@ -1,6 +1,6 @@
 <script lang="ts">
 import CarouselCard from "@components/carousels/CarouselCard.vue";
-import Carousels from "@components/carousels/Carousels.json";
+import Carousels from "@components/carousels/Carousels.ts";
 
 export default {
   name: "Projects",

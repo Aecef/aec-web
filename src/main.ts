@@ -14,10 +14,25 @@ const vuetify = createVuetify({
 });
 
 
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+/* add some free styles */
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faVuejs } from '@fortawesome/free-brands-svg-icons'
+import { faFly } from '@fortawesome/free-brands-svg-icons'
+import { faReact } from '@fortawesome/free-brands-svg-icons'
+/* add icons to the library */
+library.add(faUserSecret, faFly, faReact, faVuejs )
+
 const app = createApp(App);
 
 
 app.use(vuetify);
+app.component('font-awesome-icon', FontAwesomeIcon);
 app.use(router);
 
 app.mount('#app');
