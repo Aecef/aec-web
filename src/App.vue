@@ -55,7 +55,7 @@ export default {
             style="transform: scale(1.5)"
           />
         </a>
-        <a class="icon-nav" href="">
+        <a class="icon-nav" href="https://www.linkedin.com/in/aleccleofe/">
           <font-awesome-icon
             :icon="['fab', 'linkedin']"
             size="2xl"

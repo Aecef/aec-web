@@ -48,4 +48,11 @@ export default {
 #alec-cover {
   width: 100%;
 }
+
+h1 {
+  font-family: "Jomhuria", Helvetica;
+  font-size: 6rem;
+  font-weight: 400;
+  height: 2.25rem;
+}
 </style>

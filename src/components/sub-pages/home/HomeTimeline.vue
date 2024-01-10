@@ -4,28 +4,28 @@ export default {
   data() {
     const timelineData = [
       {
-        title: "New Chapter",
+        title: "The Future",
         timePeriod: "Present",
-        text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit. \
-                Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        text: "As i continue my journey within software/project management, I will be searching for companies that share my values in adaptability/creatity.",
       },
       {
         title: "Certified Associate in Project Management (CAPM)",
         timePeriod: "August 2023",
-        text: "Certified Associate in Project Management is a credential offered by the Project Management Institute. \
-                \nThe CAPM is an entry-level certification for project practitioners.",
+        text: "Looking for a greater understanding of project managements role in Software engineering, I pursued a CAPM offered by the Project Management Institute. Through that process I gained a greater understanding of Agile and Waterfall methodologies, as well as the importance of clearly defining goals and aligning them with values of the client.",
       },
       {
         title: "Client Home Healthcare Inc.",
         link: "https://www.clienthhc.com/",
         position: "Help Desk Specialist",
         timePeriod: "June 2022 - July 2023",
-        text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        text: "Navigating Care with Precision:  I ensured seamless support \
+              for patients and colleagues, troubleshooting issues, and delivering timely solutions to enhance the healthcare experience.",
       },
       {
         title: "BSE in Computer Science Engineering",
         timePeriod: "May 2022",
-        text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        text: "I officially graduated from the University of Iowa with a BSE in Computer Science Engineering. \
+              I've honed my skills in analyzing cutting-edge solutions, tackling complex challenges, and exploring new technologies. ",
       },
       {
         title: "Sentinel Technologies",
@@ -45,14 +45,15 @@ export default {
       {
         title: "Covid",
         timePeriod: "2020",
-        text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        text: "In 2020 the normal routine of univeristy life was disrupted by the Covid-19 pandemic. \
+              The University of Iowa transitioned to online classes and managed multiple organizations in all-virtual models.",
       },
       {
         title: "EPX Studio",
         link: "https://epx.org.uiowa.edu/",
         position: "President",
         timePeriod: "August 2019 - May 2022",
-        text: "Lorem ipsum dolor sit amet, no nam oblique veritus. Est et nobis iisque percipit.",
+        text: "EPX Studio is a student organization at the University of Iowa that provides a space for students to learn about and create video games, animation, and other types of media. My role as president was my first true experience with leadership and the responsibility that came with it. Organizing meetings, planning events, recruitment, and ensuring that the organization was running smoothly were some of my primary roles.",
       },
       {
         title: "Univeristy of Iowa",
@@ -180,6 +181,7 @@ export default {
 <style scoped>
 a {
   font-weight: bolder;
+  color: orange;
 }
 
 h2 {
@@ -187,6 +189,10 @@ h2 {
   font-size: 2.5rem;
   font-weight: 400;
   height: 2.25rem;
+}
+
+p {
+  padding-bottom: 20px;
 }
 .timeline-item {
   opacity: 0;

@@ -26,6 +26,15 @@ const projects = [
         purpose: "To learn the basics of the Godot engine.",
         skills: [['fab', 'vuejs']],
         url: "./src/assets/img/UoI.jpg"
-    }]
+    },
+    {
+        title: "CD Projekt Red Analysis",
+        summary: "A look into the affect of CD Projeckt Red's approach towards expanding their IP into other mediums.",
+        purpose: "To learn the basics of the Godot engine.",
+        skills: [['fab', 'vuejs']],
+        url: "./src/assets/img/UoI.jpg"
+    },
+    
+]
 
 export default projects;
