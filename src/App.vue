@@ -34,18 +34,34 @@ export default {
               :to="landing.path"
               class="nav-link"
               style="color: white"
-              >{{ landing.name }}</router-link
             >
+              <p class="router-link">{{ landing.name }}</p>
+            </router-link>
           </li>
           <li class="nav-item" v-for="page in navPages" :key="page.name">
-            <router-link
-              :to="page.path"
-              class="nav-link"
-              style="color: white"
-              >{{ page.name }}</router-link
+            <router-link :to="page.path" class="nav-link" style="color: white"
+              ><p class="router-link">
+                {{ page.name }}
+              </p></router-link
             >
           </li>
         </ul>
+      </div>
+      <div class="sticky top-0 right-8">
+        <a class="icon-nav" href="https://github.com/Aecef">
+          <font-awesome-icon
+            :icon="['fab', 'github']"
+            size="2xl"
+            style="transform: scale(1.5)"
+          />
+        </a>
+        <a class="icon-nav" href="">
+          <font-awesome-icon
+            :icon="['fab', 'linkedin']"
+            size="2xl"
+            style="transform: scale(1.5)"
+          />
+        </a>
       </div>
     </div>
   </nav>
@@ -58,6 +74,22 @@ nav {
   box-shadow: 0px -10px 35px #343159;
 }
 
+.icon-nav {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  color: #ffffff;
+  display: inline-grid;
+  width: 15px;
+}
+
+.icon-nav:hover,
+.router-link:hover {
+  color: orange;
+  transform: scale(1.2);
+
+  transition: transform 0.2s ease-in-out;
+}
+
 #app {
   margin-left: 0px;
   margin-right: 0px;
@@ -67,9 +99,6 @@ nav {
 }
 #nav_Header {
   height: 10vh;
-  /* box-shadow: 0px 0px 35px #343159; */
-  /* z-index: 1; */
-  /* padding-top: 10px; */
   padding-left: 25px;
 }
 

@@ -25,8 +25,11 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faVuejs } from '@fortawesome/free-brands-svg-icons'
 import { faFly } from '@fortawesome/free-brands-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 /* add icons to the library */
-library.add(faUserSecret, faFly, faReact, faVuejs )
+library.add(faUserSecret, faFly, faReact, faVuejs, faGithub, faLinkedin )
 
 const app = createApp(App);
 
