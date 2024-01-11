@@ -13,9 +13,6 @@ export default {
       iowa: "./src/assets/img/UoI.jpg",
     };
   },
-  mounted() {
-    document.title = "Alec Cleofe | Home";
-  },
 };
 </script>
 
@@ -31,7 +28,7 @@ export default {
         </v-card>
       </div>
     </div>
-    <div class="d-flex place-content-center w-screen row off-white">
+    <div class="d-flex place-content-center w-screen row">
       <!-- <div class="container grid place-items-center"> -->
       <div class="container">
         <HomeTimeline />
@@ -43,10 +40,6 @@ export default {
 <style scoped>
 #home {
   display: grid;
-}
-
-.off-white {
-  background-color: #f9f9f9;
 }
 .carousel-item img {
   height: 80vh;
