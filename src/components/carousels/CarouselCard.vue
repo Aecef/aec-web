@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "Carousel",
+  name: "CarouselCard",
   props: {
     title: String,
     summary: String,

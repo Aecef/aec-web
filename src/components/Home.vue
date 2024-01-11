@@ -1,5 +1,5 @@
 <script lang="ts">
-import HomeTimeline from "@/components/sub-pages/home/HomeTimeline.vue";
+import HomeTimeline from "./sub-pages/home/HomeTimeline.vue";
 
 export default {
   name: "Home",
