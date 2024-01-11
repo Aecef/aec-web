@@ -1,0 +1,1 @@
+import{_ as t,o as e,a as o,d as s}from"./index-3rg-7Dgr.js";const c={name:"About",mounted(){document.title="Alec Cleofe | About"}},n={id:"about"},a=s("h1",null,"About",-1),_=[a];function d(r,u,i,l,p,f){return e(),o("div",n,_)}const b=t(c,[["render",d]]);export{b as default};
