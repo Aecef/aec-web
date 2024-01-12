@@ -8,13 +8,22 @@ export default {
   },
   data() {
     return {
-      valorant: "./src/assets/img/Valorant.PNG",
-      hitbox: "./src/assets/img/box_paint.jpg",
-      iowa: "./src/assets/img/UoI.jpg",
+      visitedHome: false,
     };
   },
   mounted() {
     document.title = "Alec Cleofe | Home";
+
+    this.visitedHome = document.cookie.indexOf("visitedHome") >= 0;
+
+    if (document.cookie.indexOf("visitedHome") >= 0) {
+      // If the cookie exists, do nothing
+    } else {
+      document.cookie = "visitedHome=true; max-age=86400;";
+      alert("This website is still under construction!");
+    }
+
+    console.log(this.visitedHome);
   },
 };
 </script>

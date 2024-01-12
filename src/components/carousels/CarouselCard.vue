@@ -89,15 +89,15 @@ export default {
         </v-breadcrumbs>
         <div class="carousel-inner d-flex grid place-items-center">
           <div :id="this.title + '-summary'" class="carousel-item active">
-            <h1>Summary</h1>
-            <p>{{ summary }}</p>
+            <v-card-title style="font-weight: bolder">Summary</v-card-title>
+            <v-card-text>{{ summary }}</v-card-text>
           </div>
           <div :id="this.title + '-purpose'" class="carousel-item">
-            <h1>Purpose</h1>
-            <p>{{ purpose }}</p>
+            <v-card-title style="font-weight: bolder">Purpose</v-card-title>
+            <v-card-text>{{ purpose }}</v-card-text>
           </div>
           <div :id="this.title + '-skills'" class="carousel-item">
-            <h1>Tools</h1>
+            <v-card-title style="font-weight: bolder">Tools</v-card-title>
             <div class="row pt-10">
               <div class="col icon-col" v-for="tool in this.skills">
                 <font-awesome-icon
