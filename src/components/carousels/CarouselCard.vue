@@ -7,6 +7,7 @@ export default {
     purpose: String,
     skills: Object,
     url: String,
+    id: String,
     side: Number,
   },
   mounted() {
@@ -49,7 +50,7 @@ export default {
 </script>
 
 <template>
-  <div id="CarouselCard" class="row">
+  <div class="row">
     <v-card
       class="col-md-4 target-card"
       style="display: grid; place-items: center"

@@ -2,6 +2,8 @@
 import CarouselCard from "../carousels/CarouselCard.vue";
 import Carousels from "../carousels/Carousels";
 
+import { ref } from "vue";
+
 export default {
   name: "Projects",
   components: {
@@ -23,6 +25,14 @@ export default {
   mounted() {
     document.title = "Alec Cleofe | Projects";
   },
+  methods: {
+    scrollTo(refName: string) {
+      document.getElementById(refName)?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    },
+  },
 };
 </script>
 
@@ -35,16 +45,38 @@ export default {
           min-height="450px"
         >
           <h1>Alec Cleofe</h1>
+          <!-- Project Table of Contents -->
+          <v-card class="mx-auto" max-width="300">
+            <v-list density="compact">
+              <v-list-subheader>PROJECTS</v-list-subheader>
+
+              <v-list-item
+                v-for="(carousel, i) in Carousels"
+                :key="i"
+                :value="carousel"
+                @click="scrollTo(carousel.id)"
+                color="primary"
+              >
+                <v-list-item-title v-text="carousel.title"></v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-card>
+          <!-- END -->
         </v-card>
       </div>
     </div>
-    <div class="container project-container" v-for="carousel in Carousels">
+    <div
+      class="container project-container w-[1300px]"
+      v-for="carousel in Carousels"
+      :id="carousel.id"
+    >
       <CarouselCard
         :title="carousel.title"
         :summary="carousel.summary"
         :purpose="carousel.purpose"
         :url="carousel.url"
         :skills="carousel.skills"
+        :id="carousel.id"
         :side="switchSides()"
       />
     </div>
